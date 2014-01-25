@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{0F4E657D-4BE5-A550-A00D-5976635848BB}") = "BlindMansBluff", "Assembly-CSharp.csproj", "{6F0C32DE-BF5D-767D-849F-3D57E7726D25}"
+EndProject
 Project("{0F4E657D-4BE5-A550-A00D-5976635848BB}") = "BlindMansBluff", "Assembly-UnityScript.unityproj", "{6AD0FFA2-2AF6-A320-0366-809C99E398E9}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F0C32DE-BF5D-767D-849F-3D57E7726D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0C32DE-BF5D-767D-849F-3D57E7726D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0C32DE-BF5D-767D-849F-3D57E7726D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0C32DE-BF5D-767D-849F-3D57E7726D25}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6AD0FFA2-2AF6-A320-0366-809C99E398E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6AD0FFA2-2AF6-A320-0366-809C99E398E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AD0FFA2-2AF6-A320-0366-809C99E398E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -17,7 +23,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
+					GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -35,4 +41,5 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
+
 EndGlobal
