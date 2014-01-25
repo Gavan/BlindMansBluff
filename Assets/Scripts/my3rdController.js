@@ -10,7 +10,7 @@ public var landAnimationSpeed : float = 1.0;
 
 private var _animation : Animation;
 
-private var _characterState : CharacterState;
+//private var _characterState : CharacterState;
 
 // The speed when walking
 var walkSpeed = 2.0;
@@ -71,8 +71,7 @@ private var lastJumpStartHeight = 0.0;
 
 
 private var inAirVelocity = Vector3.zero;
-
-private var lastGroundedTime = 0.0;
+	private var lastGroundedTime = 0.0;
 
 
 private var isControllable = true;
