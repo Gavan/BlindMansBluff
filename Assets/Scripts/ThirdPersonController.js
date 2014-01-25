@@ -175,14 +175,14 @@ function UpdateSmoothedMovementDirection ()
 			else
 			{
 				//moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed * Mathf.Deg2Rad * Time.deltaTime, 1000);
-				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection,10 , 1000);
+				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, 10.0f, 1000.0f);
 				
 				moveDirection = moveDirection.normalized;
 			}
 		}
 		
 		// Smooth the speed based on the current target direction
-		var curSmooth = speedSmoothing * Time.deltaTime;
+		//var curSmooth = speedSmoothing * Time.deltaTime;
 		
 		// Choose target speed
 		//* We want to support analog input but make sure you cant walk faster diagonally than just forward or sideways
@@ -208,7 +208,7 @@ function UpdateSmoothedMovementDirection ()
 		}
 		
 		//moveSpeed = Mathf.Lerp(moveSpeed, targetSpeed, curSmooth);
-		moveSpeed = Mathf.Lerp(moveSpeed, targetSpeed, curSmooth);
+		moveSpeed = Mathf.Lerp(moveSpeed, targetSpeed, 1);
 		
 		// Reset walk time start when we slow down
 		if (moveSpeed < walkSpeed * 0.3)
