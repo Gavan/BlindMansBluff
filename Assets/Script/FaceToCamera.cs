@@ -8,6 +8,9 @@ public class FaceToCamera : MonoBehaviour {
 	
 	}
 	
+	void Update () {
+		transform.rotation = Camera.main.transform.rotation*Quaternion.Euler(rotation);
+	}
 	// Update is called once per frame
 	void OnWillRenderObject () {
 		transform.rotation = Camera.current.transform.rotation*Quaternion.Euler(rotation);
