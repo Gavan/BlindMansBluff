@@ -5,7 +5,7 @@ Shader "Custom/CutoutBevel" {
          _Color ("Light Color", Color) = (0.5,0.5,0.5,1.0)
 		_RotationX ("rotation x", Range(-1,1)) = 0
 		_RotationY ("rotation y", Range(-1,1)) = 0
-	_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
+		_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
 	}
 	SubShader {
 	Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
@@ -50,8 +50,9 @@ Shader "Custom/CutoutBevel" {
 	
 			fixed3 normal = UnpackNormal(tex2D (_BumpMap, i.uv.xy));
 			half4 color = _Color;
-			color.rgb +=clamp(dot(normalize(float3 (_RotationX,_RotationY,1)), normal),0,1);
-			color = tex2D (_MainTex, i.uv.xy)*clamp(color,0,1);
+			color.rgb +=clamp(dot(normalize(float3 (_RotationX,_RotationY,1)), normal)*color.a,0,1);
+			color.a = 1;
+			color = tex2D (_MainTex, i.uv.xy)*color;
 			//float x = sin((_RotationX)*2*3.1415)/2+0.5;
 			//float y = cos((_RotationX)*2*3.1415)/2+0.5;
 			//color = tex2D (_MainTex, float2 (distance(float2 (x,y), float2(normal.r,normal.g)),0.5) );
