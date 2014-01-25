@@ -1,6 +1,12 @@
 /Temp
 /obj
-/library
+/librar
+
+Assembly-UnityScript-vs.unityproj
+Assembly-UnityScript.unityproj
+BlindMansBluff-csharp.sln
+BlindMansBluff.sln
+
 *.csproj
 *.unityproj
 *.sln
